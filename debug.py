@@ -8,7 +8,13 @@ sys.path.append("..")
 from notification import Notification
 
 notify = Notification()
+line_token          = "LINE の トークン をここに入力"
 discord_webhook_url = "Discord の Webhook URL をここに入力"
+slack_webhook_url   = "Slack の Webhook URL をここに入力"
 
+notify.set_line(line_token)
 notify.set_discord(discord_webhook_url, "bot")
+notify.set_slack(slack_webhook_url, "bot")
+
 notify.send_message("test message")
+
